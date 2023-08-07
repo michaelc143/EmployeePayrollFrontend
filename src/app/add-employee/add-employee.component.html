@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="employee.name" 
+        class="form-control" 
+        id="name" 
+        name="name" 
+        placeholder="Enter your name"
+        required #name="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="email">Role</label>
+      <input type="text" [(ngModel)]="employee.role" 
+        class="form-control" 
+        id="role" 
+        name="role" 
+        placeholder="Enter your role"
+        required #role="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="email">Salary</label>
+        <input type="text" [(ngModel)]="employee.salary" 
+          class="form-control" 
+          id="salary" 
+          name="salary" 
+          placeholder="Enter your salary"
+          required #role="ngModel">
+      </div>
+    <button type="submit" [disabled]="!userForm.form.valid" 
+      class="btn btn-info">Submit</button>
+  </form>
