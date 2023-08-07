@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { HomePageComponent } from './homePage/homePage.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 @NgModule({
   declarations: [	
     AppComponent,
     EmployeeListComponent,
     HomePageComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    DeleteEmployeeComponent
    ],
   imports: [
     BrowserModule,

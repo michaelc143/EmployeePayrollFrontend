@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Employee } from 'src/app/Employee';
+import { Employee } from '../Employee';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -20,4 +20,7 @@ export class EmployeeServiceService {
     return this.http.post<Employee>(this.employeesUrl, user);
   }
 
+  public delete(id: number) { 
+    return this.http.delete<Employee>(this.employeesUrl+"/"+id);
+  }
 }

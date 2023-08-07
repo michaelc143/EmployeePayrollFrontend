@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Id To be Deleted</label>
+      <input type="text" [(ngModel)]="id" 
+        class="form-control" 
+        id="id" 
+        name="id" 
+        placeholder="Enter your id to be deleted"
+        required #name="ngModel">
+    </div>
+    <button type="submit" [disabled]="!userForm.form.valid" 
+      class="btn btn-info">Submit</button>
+  </form>

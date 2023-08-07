@@ -1,4 +1,5 @@
-.add-emp-btn {
+.add-emp-btn,
+.delete-emp-btn {
     margin-top: 0.5rem;
 }
 
