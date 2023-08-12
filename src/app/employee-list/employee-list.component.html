@@ -19,3 +19,41 @@
           </tr>
     </tbody>
 </table>
+
+<h2>Find a specific employee's info based on id #</h2>
+<form (ngSubmit)="onSubmit(searchId)" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Id To be Viewed</label>
+      <input type="text" [(ngModel)]="searchId" 
+        class="form-control" 
+        id="searchId" 
+        name="searchId" 
+        placeholder="Enter your id to be deleted"
+        required #name="ngModel">
+    </div>
+    <button type="submit" [disabled]="!userForm.form.valid" 
+      class="btn btn-info">Submit</button>
+</form>
+<p *ngIf="errorBool">{{errorMsg}}</p>
+
+<h2 *ngIf="submittedEmployee.id != 0 && submittedEmployee.id != null && !errorBool">Employee</h2>
+<table *ngIf="submittedEmployee.id != 0 && submittedEmployee.id != null && !errorBool" [ngStyle]>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Salary</th>
+            <th>Companies</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ submittedEmployee.id }}</td>
+            <td>{{ submittedEmployee.name }}</td>
+            <td>{{ submittedEmployee.role }}</td>
+            <td>{{ submittedEmployee.salary }}</td>
+            <td>{{ submittedEmployee.companyId}}</td>
+          </tr>
+    </tbody>
+</table>
