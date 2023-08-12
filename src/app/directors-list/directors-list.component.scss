@@ -1,0 +1,17 @@
+* {
+    text-align: center !important;
+}
+
+table {
+    border: 1px solid;
+    td {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    tr > td:first-of-type {
+        border-right: solid 1px;
+    }
+    thead > tr > th {
+        border-bottom: solid 1px;
+    }
+}

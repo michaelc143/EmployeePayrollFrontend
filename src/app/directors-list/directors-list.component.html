@@ -1,0 +1,19 @@
+<h2>Director Table</h2>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Companies</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let director of directors">
+            <td>{{ director.id }}</td>
+            <td>{{ director.name }}</td>
+            <td>{{ director.department }}</td>
+            <td>{{ director.companyId}}</td>
+          </tr>
+    </tbody>
+</table>

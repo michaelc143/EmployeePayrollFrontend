@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmployeeServiceService } from '../services/employee-service.service';
-import { Employee } from '../Employee';
+import { Employee } from '../employee';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-employee',

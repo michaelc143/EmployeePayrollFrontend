@@ -1,8 +1,17 @@
 .add-emp-btn,
-.delete-emp-btn {
+.delete-emp-btn,
+.directors-btn {
     margin-top: 0.5rem;
 }
 
-* {
-    display: flex;
+.buttons {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+mat-divider {
+    margin-top: 0.5rem;
+    border-top-color: #333 !important;
 }
